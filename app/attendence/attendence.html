@@ -1,0 +1,22 @@
+<div id="cal-wrapper">
+ <div>{{attendenceData}}</div>
+  <div *ngFor="let attendence of attendenceData" 
+  class="{{attendence.isCurrentMonth ? 'date future col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2' 
+  : 'date yesterday col-xs-12 col-sm-6 col-md-3 sevencols col-lg-2'}}">
+
+    <div class="date-header">
+      <h4>{{attendence.displayDate}}</h4>
+    </div>
+
+    <div *ngIf="attendence.timeSpent == undefined" class="date-item none">
+      <b data="no-items" class="no-items">No Time Logged</b>
+    </div>
+
+    <div *ngIf="attendence.timeSpent" class="date-item">
+      <b>Time Logged: {{attendence.timeSpent}} Hour(s)</b>
+      <br />
+    </div>
+
+  </div>
+
+</div>

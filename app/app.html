@@ -1,0 +1,16 @@
+<div class="container">
+ <div class="row">
+	<div class="twelve columns">
+		<h1>Attendence of {{employee}}</h1>
+		<hr />
+		<div id="calendar">
+		<div class="text-center">
+        <a class="month-selector" (click)="onPrevious()" href="#">Previous</a>
+
+        <h2 class="month-header">{{getMonth()}}</h2><a class="month-selector" (click)="onNext()" href="#">Next</a>
+      </div>
+		  <attendence [employee]="employee" [month]="month" [year]="year"></attendence>
+		</div>
+	</div>
+ </div>
+</div>
